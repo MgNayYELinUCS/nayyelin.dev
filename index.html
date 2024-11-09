@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Body background and layout styling */
+    body {
+      background-color: #172A45;
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* Full viewport height */
+    }
+  </style>
+
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Nay Ye Lin">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="my_portfolio">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <title>nayyelin</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    const serviceWorkerVersion = "1797768680";
+  </script>
+  <script src="flutter.js" defer></script>
+</head>
+<body>
+
+  <!-- Centered Lottie Player Container -->
+  <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+    <dotlottie-player 
+      src="https://lottie.host/a7e1d008-0059-4aa6-b5f7-f7ceda857574/erEuB41nsM.json" 
+      background="#172A45" 
+      speed="1" 
+      style="width: 50%; height: 50%" 
+      loop 
+      autoplay>
+    </dotlottie-player>
+  </div>
+
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> 
+
+  <script>
+    window.addEventListener('load', function(ev) {
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
